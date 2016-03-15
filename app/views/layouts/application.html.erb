@@ -7,7 +7,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<h1>Texposou</h1>
+<div style="width:100%;display:block">
+<div style="display: inline-block;">
+<%= link_to 'Home', page_home_path %> - 
+<%= link_to 'About', page_about_path %> - 
+<%= link_to 'Contact', page_contact_path %>
+</div>
 
+<div style="display: inline-block;float: right;">
+<% if !user_signed_in? %>
+
+<%= link_to 'Sign in', new_user_session_path %> - 
+<%= link_to 'Sign up', new_user_registration_path %>
+
+<% else %>
+
+<%= link_to 'Sign out', destroy_user_session_path, method: :delete %><br>
+
+<% end %>
+</div>
+</div>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 <%= yield %>
 
 </body>
