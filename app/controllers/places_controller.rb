@@ -1,10 +1,11 @@
 class PlacesController < ApplicationController
   before_action :set_place, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /places
   # GET /places.json
   def index
-    @places = Place.all
+    @places = Place.all.order('created_at DESC')
   end
 
   # GET /places/1
@@ -25,6 +26,7 @@ class PlacesController < ApplicationController
   # POST /places.json
   def create
     @place = Place.new(place_params)
+    @place.user = current_user
 
     respond_to do |format|
       if @place.save

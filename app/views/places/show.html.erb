@@ -6,32 +6,18 @@
 </p>
 
 <p>
+  Submitted <%= time_ago_in_words(@place.created_at) %> ago by <%= @place.user.username %>
+</p>
+
+<p>
   <strong>Description:</strong>
   <%= @place.description %>
 </p>
 
 <p>
   <strong>Address:</strong>
-  <%= @place.address %>
+  <%= @place.address %> — <%= @place.zipcode %> - <%= @place.city %>
 </p>
-
-<p>
-  <strong>Zipcode:</strong>
-  <%= @place.zipcode %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @place.city %>
-</p>
-
-<% unless @place.user.nil? %>
-  <p>
-    <strong>User:</strong>
-    <%= @place.user %>
-    (<%= link_to @place.user.email, "mailto:#{@place.user.email}" %>)
-  </p>
-<% end %>
 
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>
