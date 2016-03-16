@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :places
   resources :expos
 
   devise_for :users
@@ -15,6 +16,6 @@ Rails.application.routes.draw do
   get '/about', to: 'page#about'
   get '/contact', to: 'page#contact'
 
-  root 'expos#index'
+  root 'places#index'
 
 end

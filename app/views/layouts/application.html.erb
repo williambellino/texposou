@@ -7,39 +7,41 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="content" style="width:600px; height:auto; margin: 0 auto;">
-    <header id="header" style="background: #2AFFFE;padding: 1em 2em 2em">
-      <h1>Texposou</h1>
-      <div style="width:100%;display:block">
-        <div style="display: inline-block;">
-          <%= link_to 'Home', root_path %> - 
-          <%= link_to 'About', about_path %> - 
-          <%= link_to 'Contact', contact_path %>
-        </div>
-
-        <div style="display: inline-block;float: right;">
-          <% if !user_signed_in? %>
-
-            <%= link_to 'Sign in', signin_path %> - 
-            <%= link_to 'Sign up', signup_path %>
-
-          <% else %>
-
-            <%= link_to "Profile", current_user %> - 
-            <%= link_to 'Account',edit_user_registration_path %> - 
-            <%= link_to 'Sign out', destroy_user_session_path, method: :delete %><br>
-
-          <% end %>
-        </div>
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to 'Texposou', root_path, class: 'navbar-brand' %>
       </div>
-    </header>
-
-    <section id="wrapper" <% if !current_page?(root_url) %>style="padding: 2em;"<% end %>>
-
-      <%= yield %>
-
-    </section>
-    
+      <div id="navbar" class="collapse navbar-collapse navbar-right">
+        <ul class="nav navbar-nav">
+          <li class="active"><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'About', about_path %></li>
+          <li><%= link_to 'Contact', contact_path %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Compte <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <% if !user_signed_in? %>
+                <li><%= link_to 'Sign in', signin_path %></li>
+                <li><%= link_to 'Sign up', signup_path %></li>
+              <% else %>
+                <li><%= link_to "Profile", current_user %></li>
+                <li><%= link_to 'Account',edit_user_registration_path %></li>
+                <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <%= yield %>
   </div>
 </body>
 </html>
