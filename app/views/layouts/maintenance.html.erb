@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Texposou</title>
+  <%= stylesheet_link_tag    'maintenance', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'maintenance', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	
+	<div class="main">
+		<header>
+			<h1 class="logo">
+				<a href="http://texposou.herokuapp.com/">Texposou</a>
+			</h1>
+			<div class="intro">
+				<p class="line">À la recherche d'un espace pour exposer ?</p>
+				<p class="line">Texposou met en relation artistes et propriétaires</p>
+				<p class="line"> <b>Partagez ensemble votre passion pour l'art !</b></p>
+				<a href="#submit" class="button">Site en construction</a>
+			</div>
+		</header>
+		<section id="submit" class="mail-submit">
+			<div class="content">
+				<h2>Recevez un e-mail quand le site sera ouvert au public</h2>
+				<div id="mc_embed_signup">
+					<form action="//herokuapp.us13.list-manage.com/subscribe/post?u=f0c1d1cc8fc0a9e63e0f00a2c&amp;id=3dad9f23cd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+						<div id="mc_embed_signup_scroll">
+							<div class="mc-field-group">
+								<label for="mce-EMAIL">Adresse mail</label>
+								<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Votre adresse email... (ex: artiste@texposou.fr)">
+							</div>
+							<div id="mce-responses" class="clear">
+								<div class="response" id="mce-error-response" style="display:none"></div>
+								<div class="response" id="mce-success-response" style="display:none"></div>
+							</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+							<div style="position: absolute; left: -5000px;" aria-hidden="true">
+								<input type="text" name="b_39ebaac7022f3995e350712e1_7eef197a31" tabindex="-1" value="">
+							</div>
+							<div class="clear">
+								<input type="submit" value="Envoyer" name="envoyer" id="mc-embedded-subscribe" class="button">
+							</div>
+						</div>
+					</form>
+				</div>
+				<script type='text/javascript' src='http://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+				<!--End mc_embed_signup-->
+			</div>
+		</section>
+	</div>
+
+	<footer>
+		<div class="content">
+			<h2>Rejoignez-nous sur</h2>
+			<ul>
+				<li class="facebook">
+					<a href="https://www.facebook.com/texposou/">facebook</a>
+				</li>
+				<li class="twitter">
+					<a href="https://twitter.com/texposou">twitter</a>
+				</li>
+				<li class="google">
+					<a href="https://plus.google.com/u/0/117601800868554882796">google+</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="copy">© 2016 Texposou — Tous droits réservés</div>
+	</footer>
+</body>
+</html>

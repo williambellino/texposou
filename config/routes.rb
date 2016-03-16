@@ -3,16 +3,18 @@ Rails.application.routes.draw do
   resources :places
 
   devise_for :users
+  
   devise_scope :user do
   	get "/signin" => "devise/sessions#new"
   	get "/signup" => "devise/registrations#new"
   end
+
   resources :users
 
-  get 'page/home'
-  get '/about', to: 'page#about'
-  get '/contact', to: 'page#contact'
+  get '/home', to: 'pages#home'
+  get '/about', to: 'pages#about'
+  get '/contact', to: 'pages#contact'
 
-  root 'places#index'
+  root 'pages#home'
 
 end
