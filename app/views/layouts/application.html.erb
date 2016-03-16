@@ -7,31 +7,39 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1>Texposou</h1>
-<div style="width:100%;display:block">
-<div style="display: inline-block;">
-<%= link_to 'Home', page_home_path %> - 
-<%= link_to 'About', page_about_path %> - 
-<%= link_to 'Contact', page_contact_path %>
-</div>
+  <div id="content" style="width:600px; height:auto; margin: 0 auto;">
+    <header id="header" style="background: #2AFFFE;padding: 1em 2em 2em">
+      <h1>Texposou</h1>
+      <div style="width:100%;display:block">
+        <div style="display: inline-block;">
+          <%= link_to 'Home', root_path %> - 
+          <%= link_to 'About', about_path %> - 
+          <%= link_to 'Contact', contact_path %>
+        </div>
 
-<div style="display: inline-block;float: right;">
-<% if !user_signed_in? %>
+        <div style="display: inline-block;float: right;">
+          <% if !user_signed_in? %>
 
-<%= link_to 'Sign in', new_user_session_path %> - 
-<%= link_to 'Sign up', new_user_registration_path %>
+            <%= link_to 'Sign in', signin_path %> - 
+            <%= link_to 'Sign up', signup_path %>
 
-<% else %>
+          <% else %>
 
-<%= link_to 'Sign out', destroy_user_session_path, method: :delete %><br>
+            <%= link_to "Profile", current_user %> - 
+            <%= link_to 'Account',edit_user_registration_path %> - 
+            <%= link_to 'Sign out', destroy_user_session_path, method: :delete %><br>
 
-<% end %>
-</div>
-</div>
+          <% end %>
+        </div>
+      </div>
+    </header>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-<%= yield %>
+    <section id="wrapper" <% if !current_page?(root_url) %>style="padding: 2em;"<% end %>>
 
+      <%= yield %>
+
+    </section>
+    
+  </div>
 </body>
 </html>

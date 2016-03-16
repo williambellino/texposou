@@ -1,0 +1,13 @@
+<h1><%= @user.username %></h1>
+<p>
+	<%= @user.biography %>
+</p>
+
+<% if @user.website %>
+<p>
+	<b>website:</b>
+	<%= link_to @user.website, @user.website, :target => "_blank" %>
+</p>
+<% end %>
+
+<span style="font-style: italic; color: #777">Last connection <%= @user.last_sign_in_at %></span>
