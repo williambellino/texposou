@@ -25,11 +25,13 @@
   <%= @place.city %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @place.user %>
-  (<%= link_to @place.user.email, "mailto:#{@place.user.email}" %>)
-</p>
+<% unless @place.user.nil? %>
+  <p>
+    <strong>User:</strong>
+    <%= @place.user %>
+    (<%= link_to @place.user.email, "mailto:#{@place.user.email}" %>)
+  </p>
+<% end %>
 
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>
