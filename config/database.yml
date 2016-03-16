@@ -23,8 +23,8 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  host: ec2-54-225-151-64.compute-1.amazonaws.com
-  database: daein1cr0uba4h
-  username: qytsampgdhdvmo
-  password: TBwh0chmTa3FuflbdQglC_G0Hk
+  host: DATABASE_HOST
+  database: DATABASE_NAME
+  username: DATABASE_USERNAME
+  password: DATABASE_PASSWORD
   encoding: unicode
