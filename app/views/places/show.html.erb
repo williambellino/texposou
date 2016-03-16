@@ -6,7 +6,7 @@
 </p>
 
 <p>
-  Submitted <%= time_ago_in_words(@place.created_at) %> ago by <%= @place.user.username %>
+  Submitted <%= time_ago_in_words(@place.created_at) %> ago by <%= @place.user.username %> (<%= mail_to @place.user.email %>)
 </p>
 
 <p>
