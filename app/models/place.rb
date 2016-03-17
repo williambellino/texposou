@@ -15,6 +15,7 @@
 
 class Place < ActiveRecord::Base
   belongs_to :user
+  has_many :exhibitions
 
   validates_presence_of :name, :description, :address, :zipcode, :city, :user_id
 end

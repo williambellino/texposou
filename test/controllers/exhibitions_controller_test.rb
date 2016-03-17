@@ -18,7 +18,7 @@ class ExhibitionsControllerTest < ActionController::TestCase
 
   test "should create exhibition" do
     assert_difference('Exhibition.count') do
-      post :create, exhibition: { capacity: @exhibition.capacity, closing_date: @exhibition.closing_date, desc: @exhibition.desc, name: @exhibition.name, online: @exhibition.online, opening_date: @exhibition.opening_date }
+      post :create, exhibition: { artist: @exhibition.artist, capacity: @exhibition.capacity, closing_at: @exhibition.closing_at, description: @exhibition.description, name: @exhibition.name, opening_at: @exhibition.opening_at, place: @exhibition.place, status: @exhibition.status }
     end
 
     assert_redirected_to exhibition_path(assigns(:exhibition))
@@ -35,7 +35,7 @@ class ExhibitionsControllerTest < ActionController::TestCase
   end
 
   test "should update exhibition" do
-    patch :update, id: @exhibition, exhibition: { capacity: @exhibition.capacity, closing_date: @exhibition.closing_date, desc: @exhibition.desc, name: @exhibition.name, online: @exhibition.online, opening_date: @exhibition.opening_date }
+    patch :update, id: @exhibition, exhibition: { artist: @exhibition.artist, capacity: @exhibition.capacity, closing_at: @exhibition.closing_at, description: @exhibition.description, name: @exhibition.name, opening_at: @exhibition.opening_at, place: @exhibition.place, status: @exhibition.status }
     assert_redirected_to exhibition_path(assigns(:exhibition))
   end
 

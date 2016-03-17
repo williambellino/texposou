@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @exhibition.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @exhibition.description %>
+</p>
+
+<p>
+  <strong>Opening at:</strong>
+  <%= @exhibition.opening_at %>
+</p>
+
+<p>
+  <strong>Closing at:</strong>
+  <%= @exhibition.closing_at %>
+</p>
+
+<p>
+  <strong>Capacity:</strong>
+  <%= @exhibition.capacity %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @exhibition.artist %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @exhibition.place %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @exhibition.status %>
+</p>
+
+<%= link_to 'Edit', edit_exhibition_path(@exhibition) %> |
+<%= link_to 'Back', exhibitions_path %>
