@@ -33,7 +33,7 @@ class VisitsController < ApplicationController
 
     respond_to do |format|
       if @visit.save
-        VisitNotifier.send_registration_email(@visit).deliver_later
+        UserNotifier.send_registration_email(@visit).deliver_later
 
         format.html { redirect_to exhibition_path(params[:exhibition_id]), notice: 'Visit was successfully created.' }
         format.json { render :show, status: :created, location: @visit }

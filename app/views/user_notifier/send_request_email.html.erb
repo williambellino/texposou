@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+    <p>Bonjour <%= @place.user.username %>,</p>
+
+    <p>Vous avez reçu une demande d’exposition de <%= @artist.username %> pour votre lieu “<%= @place.name %>”. Il souhaiterait louer votre espace le <%= @exhibition.opening_at.strftime('%d/%m/%Y') %> pour exposer ses œuvres.</p>
+
+    <p>Validez ou refusez l’exposition avant le <%= 14.days.from_now.strftime('%d/%m/%Y') %>.</p>
+
+    <!-- XXX TODO ajouter un lien pour valider ou refuser -->
+
+    <p>Chapeau l’artiste,</p>
+
+    <p>L’équipe de Texposou</p>
+</body>
+</html>
