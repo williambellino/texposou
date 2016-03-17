@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  # EXHIBITIONS
+  resources :visits
   resources :exhibitions
 
   #PLACES
