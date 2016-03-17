@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Coming at:</strong>
+  <%= @visit.coming_at %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @visit.user %>
+</p>
+
+<p>
+  <strong>Exhibition:</strong>
+  <%= @visit.exhibition %>
+</p>
+
+<%= link_to 'Edit', edit_exhibition_visit_path(@visit) %> |
+<%= link_to 'Back', exhibitions_visits_path %>

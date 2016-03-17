@@ -9,8 +9,8 @@ class UsersController < ApplicationController
   end
 
   def demands
-    # @places = Place.where(user_id: @user.id)
-    # @exhibitions = Exhibition.where(user_id: current_user).order('created_at DESC')
+    @places = Place.all.where("user_id = :user_id AND status = :status", {user_id: current_user, status: "pending"})
+    @exhibitions = Exhibition.where(place_id: @places).order('created_at DESC')
   end
 
   def show
