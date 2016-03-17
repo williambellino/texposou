@@ -20379,3 +20379,844 @@ Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde45
 
 
 Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-03-17 10:23:07 +0100
+
+
+Started GET "/" for ::1 at 2016-03-17 11:10:05 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.0ms)[0m  SELECT "places".* FROM "places"  ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered places/index.html.erb within layouts/application (278.8ms)
+Completed 200 OK in 30635ms (Views: 30464.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/exhibitions" for ::1 at 2016-03-17 11:10:36 +0100
+Processing by ExhibitionsController#index as HTML
+  [1m[35mExhibition Load (0.0ms)[0m  SELECT "exhibitions".* FROM "exhibitions"
+  Rendered exhibitions/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 1100ms (Views: 1088.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/exhibitions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-17 11:10:37 +0100
+
+
+Started GET "/assets/places.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-17 11:10:37 +0100
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-17 11:10:37 +0100
+
+
+Started GET "/assets/page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-17 11:10:37 +0100
+
+
+Started GET "/assets/scaffolds.self-cdafc5b4b670c14299ddbe18c494c05b59555cc3abc4312c3b6a29ed2234700f.css?body=1" for ::1 at 2016-03-17 11:10:37 +0100
+
+
+Started GET "/assets/application.self-d6a571f9a72389dc36ad44940148bb280f9a631603fda8bafe7465eb3f08bac0.css?body=1" for ::1 at 2016-03-17 11:10:37 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-17 11:10:38 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-17 11:10:38 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-03-17 11:10:38 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-03-17 11:10:38 +0100
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-03-17 11:10:38 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-03-17 11:10:38 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-03-17 11:10:38 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-03-17 11:10:38 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-03-17 11:10:38 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-03-17 11:10:38 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-03-17 11:10:39 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-03-17 11:10:39 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-03-17 11:10:39 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-03-17 11:10:39 +0100
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-03-17 11:10:39 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-17 11:10:39 +0100
+
+
+Started GET "/assets/exhibitions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-17 11:10:39 +0100
+
+
+Started GET "/assets/expos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-17 11:10:39 +0100
+
+
+Started GET "/assets/page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-17 11:10:39 +0100
+
+
+Started GET "/assets/places.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-17 11:10:39 +0100
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-17 11:10:39 +0100
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-03-17 11:10:39 +0100
+
+
+Started GET "/exhibitions/new" for ::1 at 2016-03-17 11:11:03 +0100
+Processing by ExhibitionsController#new as HTML
+  Rendered exhibitions/_form.html.erb (698.6ms)
+  Rendered exhibitions/new.html.erb within layouts/application (816.5ms)
+Completed 200 OK in 1613ms (Views: 1591.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places" for ::1 at 2016-03-17 11:11:33 +0100
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (15.6ms)[0m  [1mSELECT "places".* FROM "places"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered places/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 851ms (Views: 846.2ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/signin" for ::1 at 2016-03-17 11:11:43 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered users/shared/_links.html.erb (4.0ms)
+  Rendered users/sessions/new.html.erb within layouts/application (185.2ms)
+Completed 200 OK in 1185ms (Views: 1163.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-03-17 11:11:51 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SlCahKZD80LbQQIIz67XG+0xA8fl0eY55kL4Yrczl+tcLAjhT9vFca7vsQO8dCCfqCKJjSoIEqc1TB2GphUICg==", "user"=>{"email"=>"dagan.menez@free.fr", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (4.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "dagan.menez@free.fr"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (4.0ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2016-03-17 10:11:51.975320"], ["sign_in_count", 2], ["updated_at", "2016-03-17 10:11:51.979346"], ["id", 4]]
+  [1m[35m (112.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 1357ms (ActiveRecord: 120.2ms)
+
+
+Started GET "/" for ::1 at 2016-03-17 11:11:52 +0100
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.0ms)[0m  [1mSELECT "places".* FROM "places"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered places/index.html.erb within layouts/application (12.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 873ms (Views: 872.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exhibitions" for ::1 at 2016-03-17 11:12:00 +0100
+Processing by ExhibitionsController#index as HTML
+  [1m[35mExhibition Load (0.0ms)[0m  SELECT "exhibitions".* FROM "exhibitions"
+  Rendered exhibitions/index.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (4.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 768ms (Views: 763.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/exhibitions/new" for ::1 at 2016-03-17 11:12:03 +0100
+Processing by ExhibitionsController#new as HTML
+  Rendered exhibitions/_form.html.erb (65.0ms)
+  Rendered exhibitions/new.html.erb within layouts/application (142.6ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+Completed 200 OK in 852ms (Views: 853.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places" for ::1 at 2016-03-17 11:12:19 +0100
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (1.0ms)[0m  [1mSELECT "places".* FROM "places"  ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered places/index.html.erb within layouts/application (9.7ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 752ms (Views: 746.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/exhibitions" for ::1 at 2016-03-17 11:12:28 +0100
+Processing by ExhibitionsController#index as HTML
+  [1m[35mExhibition Load (0.0ms)[0m  SELECT "exhibitions".* FROM "exhibitions"
+  Rendered exhibitions/index.html.erb within layouts/application (8.0ms)
+  [1m[36mUser Load (4.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 832ms (Views: 825.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/exhibitions/new" for ::1 at 2016-03-17 11:12:30 +0100
+Processing by ExhibitionsController#new as HTML
+  Rendered exhibitions/_form.html.erb (53.0ms)
+  Rendered exhibitions/new.html.erb within layouts/application (141.6ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+Completed 200 OK in 916ms (Views: 902.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/exhibitions" for ::1 at 2016-03-17 11:12:53 +0100
+Processing by ExhibitionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ui6i6JeUdwec9nMxGXv2OnrLeMssLW4lqxz1j4d5X1k9Epd91Wg19fl4T8kNhT+oP5gM+zesYeDz0gYWQVeqqg==", "exhibition"=>{"name"=>"Expo 1", "description"=>"L'ouverte !", "opening_at(1i)"=>"2016", "opening_at(2i)"=>"3", "opening_at(3i)"=>"17", "opening_at(4i)"=>"10", "opening_at(5i)"=>"12", "closing_at(1i)"=>"2016", "closing_at(2i)"=>"3", "closing_at(3i)"=>"17", "closing_at(4i)"=>"10", "closing_at(5i)"=>"12", "capacity"=>"60", "artist"=>"", "place"=>"1", "status"=>"0"}, "commit"=>"Create Exhibition"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::AssociationTypeMismatch (User(#30307200) expected, got String(#22917432)):
+  app/controllers/exhibitions_controller.rb:27:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (20.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (4999.8ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (4474.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (10278.9ms)
+
+
+Started GET "/exhibitions" for ::1 at 2016-03-17 11:13:52 +0100
+Processing by ExhibitionsController#index as HTML
+  [1m[36mExhibition Load (0.0ms)[0m  [1mSELECT "exhibitions".* FROM "exhibitions"[0m
+  Rendered exhibitions/index.html.erb within layouts/application (4.0ms)
+  [1m[35mUser Load (4.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+Completed 200 OK in 800ms (Views: 795.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/exhibitions/1" for ::1 at 2016-03-17 11:13:59 +0100
+Processing by ExhibitionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExhibition Load (1.5ms)[0m  [1mSELECT  "exhibitions".* FROM "exhibitions" WHERE "exhibitions"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 11ms (ActiveRecord: 1.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Exhibition with 'id'=1):
+  app/controllers/exhibitions_controller.rb:67:in `set_exhibition'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (5423.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (4258.4ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (10602.5ms)
+
+
+Started GET "/exhibitions/new" for ::1 at 2016-03-17 11:17:59 +0100
+Processing by ExhibitionsController#new as HTML
+  Rendered exhibitions/_form.html.erb (62.5ms)
+  Rendered exhibitions/new.html.erb within layouts/application (151.3ms)
+  [1m[35mUser Load (15.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+Completed 200 OK in 908ms (Views: 896.9ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/exhibitions" for ::1 at 2016-03-17 11:18:31 +0100
+Processing by ExhibitionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rkb9/FyAx/zT010jQ/KgAqvTWdUDeID52986B9PvxKvBeshpHnyFDrZdYdtXDGmQ7oAt5Rj5jzyDEcmeFcExWA==", "exhibition"=>{"name"=>"Expo 1", "description"=>"Expo 1", "opening_at(1i)"=>"2016", "opening_at(2i)"=>"3", "opening_at(3i)"=>"17", "opening_at(4i)"=>"10", "opening_at(5i)"=>"17", "closing_at(1i)"=>"2016", "closing_at(2i)"=>"3", "closing_at(3i)"=>"17", "closing_at(4i)"=>"10", "closing_at(5i)"=>"17", "capacity"=>"60", "artist"=>"1", "place"=>"1", "status"=>"0"}, "commit"=>"Create Exhibition"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::AssociationTypeMismatch (User(#30307200) expected, got String(#22917432)):
+  app/controllers/exhibitions_controller.rb:27:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (5056.7ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (4712.8ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (10862.9ms)
+
+
+Started GET "/visits" for ::1 at 2016-03-17 11:33:58 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.6) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.6) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (6242.3ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (4485.7ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (12331.8ms)
+
+
+Started GET "/visits" for ::1 at 2016-03-17 11:37:37 +0100
+  [1m[35mActiveRecord::SchemaMigration Load (4.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.6) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.6) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (4704.7ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (2736.8ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (6845.6ms)
+
+
+Started GET "/visits" for ::1 at 2016-03-17 11:37:53 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.6) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.6) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1762.2ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1612.9ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (3573.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (15.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateVisits (20160317103043)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+
+
+Started GET "/visits" for ::1 at 2016-03-17 11:38:37 +0100
+  [1m[35mActiveRecord::SchemaMigration Load (1.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.6) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.6) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (4180.7ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (5012.9ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (11308.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateVisits (20160317103043)
+  [1m[35m (4.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (4.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateVisits (20160317103043)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateVisits (20160317103043)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "visits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "coming_at" datetime, "user_id" integer, "exhibition_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mCREATE  INDEX "index_visits_on_user_id" ON "visits" ("user_id")[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_visits_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_visits_on_user_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1mCREATE  INDEX "index_visits_on_exhibition_id" ON "visits" ("exhibition_id")[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160317103043"]]
+  [1m[36m (94.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (4.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_exhibitions_on_place_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_exhibitions_on_place_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_places_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_places_on_user_id' AND type='index'
+
+  [1m[36m (0.5ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_visits_on_exhibition_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_visits_on_exhibition_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_visits_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_visits_on_user_id' AND type='index'
+
+
+
+Started GET "/visits" for ::1 at 2016-03-17 11:53:53 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitsController#index as HTML
+  [1m[35mVisit Load (0.0ms)[0m  SELECT "visits".* FROM "visits"
+  Rendered visits/index.html.erb within layouts/application (8.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 23659ms (Views: 23623.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/exhibitions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-17 11:54:17 +0100
+
+
+Started GET "/assets/maintenance.self-12f51528168bbe51b8042046ee9efc9b77a18bda5662c31958740b9ce3289020.css?body=1" for ::1 at 2016-03-17 11:54:18 +0100
+
+
+Started GET "/assets/page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-17 11:54:18 +0100
+
+
+Started GET "/assets/places.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-17 11:54:18 +0100
+
+
+Started GET "/assets/scaffolds.self-cdafc5b4b670c14299ddbe18c494c05b59555cc3abc4312c3b6a29ed2234700f.css?body=1" for ::1 at 2016-03-17 11:54:18 +0100
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-17 11:54:18 +0100
+
+
+Started GET "/assets/visits.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-17 11:54:18 +0100
+
+
+Started GET "/assets/application.self-d6a571f9a72389dc36ad44940148bb280f9a631603fda8bafe7465eb3f08bac0.css?body=1" for ::1 at 2016-03-17 11:54:18 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-17 11:54:18 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-17 11:54:19 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for ::1 at 2016-03-17 11:54:19 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for ::1 at 2016-03-17 11:54:19 +0100
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for ::1 at 2016-03-17 11:54:19 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for ::1 at 2016-03-17 11:54:19 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for ::1 at 2016-03-17 11:54:19 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for ::1 at 2016-03-17 11:54:19 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for ::1 at 2016-03-17 11:54:19 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for ::1 at 2016-03-17 11:54:19 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for ::1 at 2016-03-17 11:54:19 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for ::1 at 2016-03-17 11:54:19 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for ::1 at 2016-03-17 11:54:19 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for ::1 at 2016-03-17 11:54:20 +0100
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-03-17 11:54:20 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-17 11:54:20 +0100
+
+
+Started GET "/assets/exhibitions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-17 11:54:20 +0100
+
+
+Started GET "/assets/expos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-17 11:54:20 +0100
+
+
+Started GET "/assets/page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-17 11:54:20 +0100
+
+
+Started GET "/assets/places.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-17 11:54:20 +0100
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-17 11:54:20 +0100
+
+
+Started GET "/assets/visits.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-17 11:54:20 +0100
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-03-17 11:54:20 +0100
+
+
+Started GET "/visits/new" for ::1 at 2016-03-17 12:06:22 +0100
+Processing by VisitsController#new as HTML
+  Rendered visits/_form.html.erb (125.6ms)
+  Rendered visits/new.html.erb within layouts/application (204.1ms)
+Completed 500 Internal Server Error in 521ms (ActiveRecord: 4.0ms)
+
+ActionView::Template::Error (undefined method `user' for #<Visit:0x9b3a738>):
+     5: 
+     6:     <%= f.input :coming_at %>
+     7: 
+     8:     <%= f.input :user %>
+     9: 
+    10:     <%= f.input :exhibition %>
+    11: 
+  app/views/visits/_form.html.erb:8:in `block in _app_views_visits__form_html_erb___492768196_80788284'
+  app/views/visits/_form.html.erb:1:in `_app_views_visits__form_html_erb___492768196_80788284'
+  app/views/visits/new.html.erb:3:in `_app_views_visits_new_html_erb___545095529_81020472'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (4529.9ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (4361.9ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (9831.2ms)
+
+
+Started GET "/visits/new" for ::1 at 2016-03-17 12:06:42 +0100
+Processing by VisitsController#new as HTML
+  Rendered visits/_form.html.erb (178.1ms)
+  Rendered visits/new.html.erb within layouts/application (344.2ms)
+Completed 500 Internal Server Error in 765ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `user' for #<Visit:0xadabe98>):
+     5: 
+     6:     <%= f.input :coming_at %>
+     7: 
+     8:     <%= f.input :user %>
+     9: 
+    10:     <%= f.input :exhibition %>
+    11: 
+  app/views/visits/_form.html.erb:8:in `block in _app_views_visits__form_html_erb___492768196_80788284'
+  app/views/visits/_form.html.erb:1:in `_app_views_visits__form_html_erb___492768196_80788284'
+  app/views/visits/new.html.erb:3:in `_app_views_visits_new_html_erb___545095529_81020472'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (36.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (5075.6ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (4410.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (10131.3ms)
+
+
+Started GET "/visits/new" for ::1 at 2016-03-17 12:07:01 +0100
+Processing by VisitsController#new as HTML
+  Rendered visits/_form.html.erb (88.1ms)
+  Rendered visits/new.html.erb within layouts/application (146.1ms)
+Completed 500 Internal Server Error in 409ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `user' for #<Visit:0xb958a68>):
+     5: 
+     6:     <%= f.input :coming_at %>
+     7: 
+     8:     <%= f.input :user %>
+     9: 
+    10:     <%= f.input :exhibition %>
+    11: 
+  app/views/visits/_form.html.erb:8:in `block in _app_views_visits__form_html_erb___492768196_97147848'
+  app/views/visits/_form.html.erb:1:in `_app_views_visits__form_html_erb___492768196_97147848'
+  app/views/visits/new.html.erb:3:in `_app_views_visits_new_html_erb___545095529_97164456'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (24.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (5002.7ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (5633.7ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (12156.2ms)
+
+
+Started GET "/visits/new" for ::1 at 2016-03-17 12:07:23 +0100
+Processing by VisitsController#new as HTML
+  Rendered visits/_form.html.erb (112.0ms)
+  Rendered visits/new.html.erb within layouts/application (187.6ms)
+Completed 500 Internal Server Error in 828ms (ActiveRecord: 4.5ms)
+
+ActionView::Template::Error (undefined method `user' for #<Visit:0x9f17f88>):
+     5: 
+     6:     <%= f.input :coming_at %>
+     7: 
+     8:     <%= f.input :user %>
+     9: 
+    10:     <%= f.input :exhibition %>
+    11: 
+  app/views/visits/_form.html.erb:8:in `block in _app_views_visits__form_html_erb___492768196_97147848'
+  app/views/visits/_form.html.erb:1:in `_app_views_visits__form_html_erb___492768196_97147848'
+  app/views/visits/new.html.erb:3:in `_app_views_visits_new_html_erb___545095529_97164456'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (4838.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (4326.3ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (10045.4ms)
+
+
+Started GET "/visits/" for ::1 at 2016-03-17 12:45:48 +0100
+Processing by VisitsController#index as HTML
+  [1m[35mVisit Load (3.0ms)[0m  SELECT "visits".* FROM "visits"
+  Rendered visits/index.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (4.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 912ms (Views: 871.4ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/visits/new" for ::1 at 2016-03-17 12:45:59 +0100
+Processing by VisitsController#new as HTML
+  Rendered visits/_form.html.erb (53.4ms)
+  Rendered visits/new.html.erb within layouts/application (138.1ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+Completed 200 OK in 892ms (Views: 878.8ms | ActiveRecord: 0.0ms)
