@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :exhibitions do
     resources :visits
   end
+  get 'exhibitions/:id/manage' => 'exhibitions#manage'
 
   #PLACES
   resources :places
