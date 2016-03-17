@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-  </head>
-  <body>
-    <h1>Thanks for signing up, <%= @user.email %>!</h1>
-    <p>Thanks for joining and have a great day! Now sign in and do
-awesome things!</p>
-  </body>
+</head>
+<body>
+    <p>Bonjour [usernameVisiteur],</p>
+
+    <p>Vous avez bien été inscrit pour l’exposition <%= @visit.exhibition.name %> le <%= @visit.coming_at.strftime('%d/%m/%Y') %> à <%= @visit.coming_at.strftime('%Hh %M') %>.</p>
+
+    <p>Voici l’adresse du rendez-vous : <br />
+        <%= @visit.exhibition.place.name %> <br />
+        <%= @visit.exhibition.place.address %> <br />
+        <%= @visit.exhibition.place.zipcode %> <%= @visit.exhibition.place.city %>
+    </p>
+
+    <p>N’hésitez pas à nous faire partager vos impressions. Bonne exposition !</p>
+
+    <p>Chapeau l’artiste,</p>
+
+    <p>L’équipe de Texposou</p>
+</body>
 </html>
