@@ -10,7 +10,7 @@ class ExhibitionsController < ApplicationController
   # GET /exhibitions/1
   # GET /exhibitions/1.json
   def show
-
+    @visit = Visit.new
   end
 
   # GET /exhibitions/new

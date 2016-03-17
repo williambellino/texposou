@@ -39,6 +39,7 @@
   <strong>Status:</strong>
   <%= @exhibition.status %>
 </p>
+<%= render 'visits/form' %>
 
 <%= link_to 'Edit', edit_exhibition_path(@exhibition) %> |
 <%= link_to 'Back', exhibitions_path %>

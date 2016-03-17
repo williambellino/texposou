@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
-  
-  resources :visits
-  resources :exhibitions
+
+
+  resources :exhibitions do
+    resources :visits
+  end
 
   #PLACES
   resources :places
 
-  # USERS 
+  # USERS
   devise_for :users
-  
+
   devise_scope :user do
   	get "/signin" => "devise/sessions#new"
   	get "/signup" => "devise/registrations#new"
@@ -23,7 +25,7 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#about'
   get '/contact', to: 'pages#contact'
 
-  #ROOT PAGE 
+  #ROOT PAGE
   if Rails.env.production?
     root 'pages#home'
   else
