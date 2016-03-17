@@ -10,10 +10,12 @@ class ExhibitionsController < ApplicationController
   # GET /exhibitions/1
   # GET /exhibitions/1.json
   def show
+
   end
 
   # GET /exhibitions/new
   def new
+    @place = Place.find params[:place_id] if params[:place_id]
     @exhibition = Exhibition.new
   end
 
@@ -25,6 +27,8 @@ class ExhibitionsController < ApplicationController
   # POST /exhibitions.json
   def create
     @exhibition = Exhibition.new(exhibition_params)
+
+    # debugger
 
     respond_to do |format|
       if @exhibition.save
@@ -69,6 +73,6 @@ class ExhibitionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def exhibition_params
-      params.require(:exhibition).permit(:name, :description, :opening_at, :closing_at, :capacity, :artist, :place, :status)
+      params.require(:exhibition).permit(:name, :description, :opening_at, :closing_at, :capacity, :artist_id, :place, :status, :place_id)
     end
 end

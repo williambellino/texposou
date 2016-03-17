@@ -7,8 +7,16 @@ class UsersController < ApplicationController
       format.xml  { render :xml => @users }
     end
   end
+
+  def demands
+    # @places = Place.where(user_id: @user.id)
+    # @exhibitions = Exhibition.where(user_id: current_user).order('created_at DESC')
+  end
+
   def show
     @user = User.find(params[:id])
+    @places = Place.where(user_id: @user.id)
+    @exhibitions = Exhibition.where(artist_id: @user.id)
 
     respond_to do |format|
       format.html # show.html.erb
