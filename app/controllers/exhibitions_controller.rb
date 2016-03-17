@@ -23,6 +23,10 @@ class ExhibitionsController < ApplicationController
   def edit
   end
 
+  def manage
+    @exhibition = Exhibition.find(params[:id])
+  end
+
   # POST /exhibitions
   # POST /exhibitions.json
   def create
