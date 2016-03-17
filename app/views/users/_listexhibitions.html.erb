@@ -1,6 +1,6 @@
 <% @exhibitions.each do |exhibition| %>
 <article>
-  <h2><%= link_to exhibition.name, edit_exhibition_path(exhibition) %></h2>
+  <h2><%= link_to exhibition.name, manage_exhibition_path(exhibition) %></h2>
   <p>
     <span><em>Status: <%= exhibition.status %></em></span>
   </p>
