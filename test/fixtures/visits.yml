@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  coming_at: 2016-03-17 11:30:43
+  user: 
+  exhibition: 
+
+two:
+  coming_at: 2016-03-17 11:30:43
+  user: 
+  exhibition: 
