@@ -19,5 +19,6 @@
   <%= @place.address %> — <%= @place.zipcode %> - <%= @place.city %>
 </p>
 
-<%= link_to 'Edit', edit_place_path(@place) %> |
-<%= link_to 'Back', places_path %>
+<p><%= link_to 'New exhibition', new_exhibition_path(place_id: @place.id) %></p>
+
+<p><%= link_to 'Edit', edit_place_path(@place) %> | <%= link_to 'Back', places_path %></p>

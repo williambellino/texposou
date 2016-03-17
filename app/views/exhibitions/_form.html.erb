@@ -7,8 +7,12 @@
     <%= f.input :opening_at %>
     <%= f.input :closing_at %>
     <%= f.input :capacity %>
-    <%= f.input :artist %>
+    <%= f.association :artist %>
+    <% if @place %>
+    <%= f.input :place_id, as: :hidden, input_html: { value: @place.id } %>
+    <% else %>
     <%= f.input :place %>
+    <% end %>
     <%= f.input :status %>
   </div>
 

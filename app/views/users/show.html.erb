@@ -11,3 +11,9 @@
 <% end %>
 
 <span style="font-style: italic; color: #777">Last connection <%= @user.last_sign_in_at %></span>
+
+<h1>My places</h1>
+<%= render 'places/list' %>
+
+<h1>My exhibitions</h1>
+<%= render 'exhibitions/list' %>
