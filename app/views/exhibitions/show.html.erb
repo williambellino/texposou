@@ -34,7 +34,12 @@
   <strong>Place:</strong>
   <%= @exhibition.place %>
 </p>
-
+<% if @visits.where(:user_id => current_user.id).any? %>
+  <p>
+    <strong>Adresse complète</strong>
+    <%= @exhibition.place.address %>
+  </p>
+<% end %>
 <p>
   <strong>Status:</strong>
   <%= @exhibition.status %>
