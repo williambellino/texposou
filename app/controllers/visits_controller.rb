@@ -26,12 +26,15 @@ class VisitsController < ApplicationController
   # POST /visits
   # POST /visits.json
   def create
-    @exhibition = Exhibition.find(params[:exhibition_id])
-    @visit = Visit.new(visit_params)
+    @exhibition       = Exhibition.find(params[:exhibition_id])
+    @visit            = Visit.new(visit_params)
     @visit.exhibition = @exhibition
-    @visit.user = current_user
+    @visit.user       = current_user
+
     respond_to do |format|
       if @visit.save
+        VisitNotifier.send_registration_email(@visit).deliver_later
+
         format.html { redirect_to exhibition_path(params[:exhibition_id]), notice: 'Visit was successfully created.' }
         format.json { render :show, status: :created, location: @visit }
       else
