@@ -4,16 +4,12 @@
   <title>Texposou</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render 'topbar' %>
-
   <div class="container">
-<<<<<<< HEAD
-    <%= render 'layouts/topbar' %>
-=======
->>>>>>> f07b540b241d35736745b1a11e95cd6f6de2a968
+    <%= render 'application/topbar' %>
     <%= yield %>
   </div>
 </body>
