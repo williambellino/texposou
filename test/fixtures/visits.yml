@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: visits
+#
+#  id            :integer          not null, primary key
+#  coming_at     :datetime
+#  user_id       :integer
+#  exhibition_id :integer
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  coming_at: 2016-03-17 11:30:43
+  user: 
+  exhibition: 
+
+two:
+  coming_at: 2016-03-17 11:30:43
+  user: 
+  exhibition: 

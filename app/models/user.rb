@@ -11,13 +11,13 @@
 #  sign_in_count          :integer          default("0"), not null
 #  current_sign_in_at     :datetime
 #  last_sign_in_at        :datetime
-#  current_sign_in_ip     :inet
-#  last_sign_in_ip        :inet
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  username               :string
 #  biography              :text
 #  website                :string
+#  current_sign_in_ip     :string
+#  last_sign_in_ip        :string
 #
 
 class User < ActiveRecord::Base
@@ -29,6 +29,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  validates_presence_of :email, :password
 
   def to_s
   	"#{username}"

@@ -10,7 +10,8 @@ class ExhibitionsController < ApplicationController
   # GET /exhibitions/1
   # GET /exhibitions/1.json
   def show
-
+    @visit = Visit.new
+    @visits = @exhibition.visits
   end
 
   # GET /exhibitions/new
@@ -21,6 +22,10 @@ class ExhibitionsController < ApplicationController
 
   # GET /exhibitions/1/edit
   def edit
+  end
+
+  def manage
+    @exhibition = Exhibition.find(params[:id])
   end
 
   # POST /exhibitions

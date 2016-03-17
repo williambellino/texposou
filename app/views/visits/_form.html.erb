@@ -1,0 +1,16 @@
+<%= simple_form_for(@visit, url: @visit.new_record? ? exhibition_visits_path(exhibition_id: @exhibition.id) : exhibition_visit_path(@visit)) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+
+    <%= f.input :coming_at %>
+
+  <!--  <%= f.input :user %> -->
+
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

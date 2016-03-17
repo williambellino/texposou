@@ -18,4 +18,8 @@ class Place < ActiveRecord::Base
   has_many :exhibitions
 
   validates_presence_of :name, :description, :address, :zipcode, :city, :user_id
+
+  def to_s
+  	"#{name}"
+  end
 end

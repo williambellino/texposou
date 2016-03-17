@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Visits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Coming at</th>
+      <th>User</th>
+      <th>Exhibition</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @visits.each do |visit| %>
+      <tr>
+        <td><%= visit.coming_at %></td>
+        <td><%= visit.user %></td>
+        <td><%= visit.exhibition %></td>
+        <td><%= link_to 'Show', exhibition_visit_path(id: visit.id, exhibition_id: visit.exhibition_id) %></td>
+        <td><%= link_to 'Edit', edit_exhibition_visit_path(visit) %></td>
+        <td><%= link_to 'Destroy', exhibition_visit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Visit', new_exhibition_visit_path %>

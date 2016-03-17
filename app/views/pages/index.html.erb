@@ -1,10 +1,15 @@
+<div class="handHome">
+  <%= image_tag("handHome.png", :alt => "img main accueil", height:"40%", width:"40%") %>
+</div>
+
 <p id="notice"><%= notice %></p>
-<div class="col-md-12">
-  <h1>Places</h1>
-  <p>Voici tout les appartements disponibles :</p>
-  <%= render 'places/list' %>
+
+ <div class="col-md-12">
+  <h1>Lieux</h1>
+    <p>Voici tout les appartements disponibles :</p>
+    <%= render 'places/list' %>
 
   <h1>Expositions</h1>
-  <p>Voice toutes les expositions disponibles</p>
-  <%= render 'exhibitions/list' %>
+    <p>Voici toutes les expositions disponibles</p>
+    <%= render 'exhibitions/list' %>
 </div>
