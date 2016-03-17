@@ -4,7 +4,7 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
 </head>
 <body>
-    <p>Bonjour [usernameVisiteur],</p>
+    <p>Bonjour <%= @visit.user.username %>,</p>
 
     <p>Vous avez bien été inscrit pour l’exposition <%= @visit.exhibition.name %> le <%= @visit.coming_at.strftime('%d/%m/%Y') %> à <%= @visit.coming_at.strftime('%Hh %M') %>.</p>
 
