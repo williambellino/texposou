@@ -11,26 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160316150204) do
+ActiveRecord::Schema.define(version: 20160317092120) do
 
-  create_table "expos", force: :cascade do |t|
+  create_table "exhibitions", force: :cascade do |t|
     t.string   "name"
-    t.text     "content"
-    t.date     "opening_date"
-    t.date     "closing_date"
+    t.text     "description"
+    t.datetime "opening_at"
+    t.datetime "closing_at"
     t.integer  "capacity"
-    t.integer  "user_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.boolean  "is_handi"
-    t.float    "surface"
-    t.string   "address_city"
-    t.string   "address_street"
-    t.string   "address_cp"
-    t.string   "address_infos"
+    t.integer  "artist_id"
+    t.integer  "place_id"
+    t.string   "status"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
-  add_index "expos", ["user_id"], name: "index_expos_on_user_id"
+  add_index "exhibitions", ["place_id"], name: "index_exhibitions_on_place_id"
 
   create_table "places", force: :cascade do |t|
     t.string   "name"

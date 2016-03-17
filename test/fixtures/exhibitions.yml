@@ -2,16 +2,20 @@
 
 one:
   name: MyString
-  desc: MyText
-  opening_date: 2016-03-16
-  closing_date: 2016-03-16
+  description: MyText
+  opening_at: 2016-03-17 10:12:46
+  closing_at: 2016-03-17 10:12:46
   capacity: 1
-  online: false
+  artist: 1
+  place: 
+  status: MyString
 
 two:
   name: MyString
-  desc: MyText
-  opening_date: 2016-03-16
-  closing_date: 2016-03-16
+  description: MyText
+  opening_at: 2016-03-17 10:12:46
+  closing_at: 2016-03-17 10:12:46
   capacity: 1
-  online: false
+  artist: 1
+  place: 
+  status: MyString

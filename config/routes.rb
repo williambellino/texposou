@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :exhibitions
   resources :places
 
   devise_for :users
@@ -15,6 +16,11 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#about'
   get '/contact', to: 'pages#contact'
 
-  root 'pages#home'
+  
+  if Rails.env.production?
+    root 'pages#home'
+  else
+    root 'places#index'
+  end
 
 end
