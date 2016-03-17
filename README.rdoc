@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/guillaumegiroux/texposou/badges/gpa.svg)](https://codeclimate.com/github/guillaumegiroux/texposou)
+
 == README
 
 This README would normally document whatever steps are necessary to get the

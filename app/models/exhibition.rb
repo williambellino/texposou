@@ -5,4 +5,6 @@ class Exhibition < ActiveRecord::Base
 
 	validates :place, presence: true
 	validates :artist, presence: true
+
+	attr_accessor :accepts
 end
