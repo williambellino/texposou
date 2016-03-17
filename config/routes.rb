@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   
   resources :visits
+
+  # EXHIBITIONS
   resources :exhibitions
+  get '/exhibitions/:id/manage' => 'exhibitions#manage'
 
   #PLACES
   resources :places
@@ -15,7 +18,7 @@ Rails.application.routes.draw do
   end
   resources :users
 
-  get 'users/:id/demands', to: 'users#demands'
+  get '/demands', to: 'users#demands'
 
   # PAGE
   get '/index', to: 'pages#index'
