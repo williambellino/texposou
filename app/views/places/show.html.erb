@@ -1,24 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @place.name %>
-</p>
+<div class="jumbotronAnnounce">
+  <h1>
+    <%= @place.name %>
+  </h1>
+</div>
 
-<p>
-  Submitted <%= time_ago_in_words(@place.created_at) %> ago by <%= @place.user.username %> (<%= mail_to @place.user.email %>)
-</p>
+<div class="announce">
+  <p>
+    <strong>Description:</strong>
+    <%= @place.description %>
+  </p>
+  
+  <p>
+    Submitted <%= time_ago_in_words(@place.created_at) %> ago by <%= @place.user.username %> (<%= mail_to @place.user.email %>)
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @place.description %>
-</p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @place.address %> — <%= @place.zipcode %> - <%= @place.city %>
-</p>
+  <p>
+    <strong>Address:</strong>
+    <%= @place.address %> — <%= @place.zipcode %> - <%= @place.city %>
+  </p>
 
-<p><%= link_to 'New exhibition', new_exhibition_path(place_id: @place.id) %></p>
+  <p><%= link_to 'New exhibition', new_exhibition_path(place_id: @place.id) %></p>
 
-<p><%= link_to 'Edit', edit_place_path(@place) %> | <%= link_to 'Back', places_path %></p>
+  <p><%= link_to 'Edit', edit_place_path(@place) %> | <%= link_to 'Back', places_path %></p>
+</div>
