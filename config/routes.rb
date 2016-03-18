@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get '/demands', to: 'users#demands'
 
   # PAGE
-  get '/index', to: 'pages#index'
+  get '/dev', to: 'pages#index'
   get '/home', to: 'pages#home'
   get '/about', to: 'pages#about'
   get '/contact', to: 'pages#contact'
