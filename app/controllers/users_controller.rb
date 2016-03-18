@@ -16,7 +16,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @places = Place.where(user_id: @user.id)
-    @exhibitions = Exhibition.where(artist_id: @user.id)
+    @exhibitions = Exhibition.where(place_id: @places)
+    @visits = Visit.where(user_id: @user.id)
 
     respond_to do |format|
       format.html # show.html.erb
