@@ -12,8 +12,12 @@
 
 <span style="font-style: italic; color: #777">Last connection <%= @user.last_sign_in_at %></span>
 
-<h1>My places</h1>
+<h1>Mes adresses</h1>
 <%= render 'places/list' %>
+<%= link_to 'Nouvelle adresse', new_place_path %>
 
-<h1>My exhibitions</h1>
+<h1>Mes expositions</h1>
 <%= render 'exhibitions/list' %>
+
+<h1>Mes inscriptions</h1>
+<%= render 'visits/list' %>
