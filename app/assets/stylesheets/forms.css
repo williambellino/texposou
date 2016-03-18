@@ -1,4 +1,4 @@
-h2 {
+h2.menu {
     padding : 10px 0 40px 0;
     font-size : 24px;
 }
@@ -23,7 +23,7 @@ input#user_remember_me {
     width : 30px;
 }
 
-.row {
+.row.menu {
     text-align: center;
-    margin-top : 40px;
+    padding : 60px 0 0 0;
 }
