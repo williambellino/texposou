@@ -26,4 +26,8 @@ class Exhibition < ActiveRecord::Base
 	validates :opening_at, presence: true
 
 	attr_accessor :accepts
+
+	def to_s
+		"#{name}"
+	end
 end

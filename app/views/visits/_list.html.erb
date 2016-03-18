@@ -1,0 +1,21 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Exposition</th>
+      <th>Date et heure d'arrivée</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @visits.each do |visit| %>
+      <tr>
+        <div class="col-md-1"><td><%= visit.exhibition %></td></div>
+        <div class="col-md-11"><td><%= visit.coming_at %></td></div>
+        <td><%= link_to 'Show', exhibition_visit_path(exhibition_id: 1) %></td>
+      <!--  <td><%#= link_to 'Edit', edit_exhibition_visit_path(visit) %></td>-->
+        <td><%= link_to 'Destroy', exhibition_visit_path(exhibition_id: 1), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
