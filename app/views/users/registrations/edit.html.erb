@@ -1,55 +1,88 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="container">
+    <h1>Éditer votre compte</h1>
+    <hr>
+  <div class="row">
+      <!-- edit form column -->
+      <div class="col-md-9 personal-info">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :role => 'form', html: {:class => 'form-horizontal', method: :put }) do |f| %>
+          <span>
+            <%= devise_error_messages! %>
+          </span>
+          <div class="form-group">
+            <%= f.label :username, "Nom d'utilisateur", :class => 'col-lg-3 control-label' %>
+            <div class="col-lg-8">
+              <%= f.text_field :username, autofocus: true, :class => 'form-control' %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.label :biography, "Description", :class => 'col-lg-3 control-label' %>
+            <div class="col-lg-8">
+              <%= f.text_area :biography, :class => 'form-control' %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.label :email, "Email", :class => 'col-lg-3 control-label' %>
+            <div class="col-lg-8">
+              <%= f.email_field :email, :class => 'form-control' %>
+            </div>
+          </div>
+          <div class="form-group" style="display: none;">
+            <label class="col-lg-3 control-label">Ville</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="">
+            </div>
+          </div>
+          <br />
+          <div class="form-group">
+            <%= f.label :website, "Site Web", :class => 'col-lg-3 control-label' %>
+            <div class="col-lg-8">
+              <%= f.text_field :website, :class => 'form-control' %>
+            </div>
+          </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+          <h3>Changer votre mot de passe</h3>
+          <div class="form-group">
+            <%= f.label :password, "Nouveau mot de passe", :class => 'col-lg-3 control-label' %>
+            <div class="col-md-8">
+              <%= f.password_field :password, autocomplete: "off", :class => 'form-control' %>
+              <span>(laissez si vous ne voulez pas changer)</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.label :password_confirmation, "Confirmation du mot de passe", :class => 'col-lg-3 control-label' %>
+            <div class="col-md-8">
+              <%= f.password_field :password_confirmation, autocomplete: "off", :class => 'form-control' %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.label :current_password, "Mot de passe actuel", :class => 'col-lg-3 control-label' %>
+            <div class="col-md-8">
+              <%= f.password_field :current_password, autocomplete: "off", :class => 'form-control' %>
+              <span>(nous avons besoin de votre mot de passe pour appliquer les changements)</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label"></label>
+            <div class="col-md-8">
+              <%= f.submit "Save Changes", :class => "btn btn-primary" %>
+            </div>
+          </div>
+        <% end %>
+        <h3>Supprimer mon compte</h3>
+        <label class="col-md-3 control-label">Mécontent ?</label>
+        <div class="col-md-8">
+          <%= button_to "Supprimer le compte", registration_path(resource_name), data: { confirm: "Êtes-vous sûr ?" }, method: :delete, :class => "btn btn-primary"  %>
+        </div>
+      </div>
+      <!-- right column -->
+      <div class="col-md-3" style="display: none;">
+        <div class="text-center">
+          <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+          <h6>Changer d'image...</h6>
 
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true %>
+          <input type="file" class="form-control">
+        </div>
+      </div>
   </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email %>
-  </div>
-
-  <div class="field">
-    <%= f.label :biography %><br />
-    <%= f.text_area :biography %>
-  </div>
-
-  <div class="field">
-    <%= f.label :website %><br />
-    <%= f.text_field :website %>
-  </div>
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <h3>Change password</h3>
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</div>
+<hr>
