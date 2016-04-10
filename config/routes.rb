@@ -27,7 +27,7 @@ Rails.application.routes.draw do
 
   #ROOT PAGE
   if Rails.env.production?
-    root 'pages#home'
+    root 'pages#index'
   else
     root 'pages#index'
   end

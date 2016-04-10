@@ -28,18 +28,36 @@ class VisitsController < ApplicationController
   def create
     @exhibition       = Exhibition.find(params[:exhibition_id])
     @visit            = Visit.new(visit_params)
-    @visit.exhibition = @exhibition
-    @visit.user       = current_user
-
-    respond_to do |format|
-      if @visit.save
-        UserNotifier.send_registration_email(@visit).deliver_later
-
-        format.html { redirect_to exhibition_path(params[:exhibition_id]), notice: 'Visit was successfully created.' }
-        format.json { render :show, status: :created, location: @visit }
+    if @exhibition.visits.count >= @exhibition.capacity
+      respond_to do |format|
+        format.html { redirect_to exhibition_path(params[:exhibition_id]), notice: 'Capacité du lieu atteinte. Impossible de vous y inscrire' }
+      end
+    else
+      if @visit.coming_at < @exhibition.opening_at
+        respond_to do |format|
+          format.html { redirect_to exhibition_path(params[:exhibition_id]), notice: "Votre date de visite doit être comprise dans les dates d'ouverture de l'exposition" }
+        end
       else
-        format.html { render :new }
-        format.json { render json: @visit.errors, status: :unprocessable_entity }
+        if @visit.coming_at >= @exhibition.closing_at
+          respond_to do |format|
+            format.html { redirect_to exhibition_path(params[:exhibition_id]), notice: "Votre date de visite doit être comprise dans les dates d'ouverture de l'exposition" }
+          end
+        else
+          @visit.exhibition = @exhibition
+          @visit.user       = current_user
+
+          respond_to do |format|
+            if @visit.save
+              UserNotifier.send_registration_email(@visit).deliver_later
+
+              format.html { redirect_to exhibition_path(params[:exhibition_id]), notice: 'Visit was successfully created.' }
+              format.json { render :show, status: :created, location: @visit }
+            else
+              format.html { render :new }
+              format.json { render json: @visit.errors, status: :unprocessable_entity }
+            end
+          end
+        end
       end
     end
   end
