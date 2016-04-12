@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<section class="place-top">
+<section class="page-top">
 	<div class='background-image' style='background-image: url(https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=6e379696c515dcecab27d93ffe6ec0ad)'></div>
 	<div class="overlay">
 		<div class='infos'>
@@ -12,23 +12,23 @@
 	</div>
 </section>
 
-<section class="place-container">
+<section class="page-container place-container">
 	<div class='content'>
 		<div class="pure-g">
 			<div class="pure-u-1 pure-u-md-2-3">
 
-				<div class="place-description">
+				<div class="page-description">
 					<h2>À propos de ce lieu</h2>
 					<p>
 						<%= @place.description %>
 					</p>
 				</div>
 
-				<div class="place-gallery">
+				<div class="page-gallery">
 					<h3>La gallerie</h3>
 					<div class="pure-g">
 						<div class="pure-u-1-2">
-							<ul class="place-details">
+							<ul class="page-details">
 								<li>
 									Nom du galleriste : <strong><%= @place.user.username %></strong>
 								</li>
@@ -41,7 +41,7 @@
 							</ul>
 						</div>
 						<div class="pure-u-1-2">
-							<ul class="place-details">
+							<ul class="page-details">
 								<li><%= @place.address %></li>
 								<li><%= @place.city %></li>
 								<li><%= @place.zipcode %></li>
@@ -49,37 +49,37 @@
 						</div>
 					</div>
 				</div>
-				<div class="place-equipment">
+				<div class="page-equipment">
 					<h3>Équipements</h3>
-					<ul class="place-details">
+					<ul class="page-details">
 						<li class="rails">Rails d'accrochages</li>
 						<li class="video">Vidéo-projecteur</li>
 						<li class="easel">Chevalet</li>
 					</ul>
 				</div>
-				<div class="place-price">
+				<div class="page-price">
 					<h3>Prix</h3>
-					<ul class="place-details">
+					<ul class="page-details">
 						<li>Prix à la demi-journée: <strong>23€</strong><span>(attention au temps d'installation !)</span></li>
 						<li>Caution : <strong>570€</strong></li>
 					</ul>
 				</div>
-				<div class="place-dispos">
+				<div class="page-dispos">
 					<h3>Disponibilités</h3>
-					<ul class="place-details">
+					<ul class="page-details">
 						<li>Uniquement la journée <a href="#">voir le calendrier</a></li>
 					</ul>
 				</div>
 			</div>
 			<div class="pure-u-1 pure-u-md-1-3">
-				<div class="place-calendar">
+				<div class="page-calendar">
 					<h3>Calendrier</h3>
-					<ul class="place-details">
+					<ul class="page-details">
 						<li>Du 1 au 5 juin 2016</li>
 					</ul>
 				</div>
 
-				<div class="place-photos">
+				<div class="page-photos">
 					<h3>Plus de photos</h3>
 				</div>
 			</div>
