@@ -1,23 +1,14 @@
 <p id="notice"><%= notice %></p>
-<div class="jumbotron">
-  <h1><span>TEXPOSOÙ ? _BORDEAUX</span>Un artiste chez vous</h1>
-  <p>
-    <a class="btn" href="#" role="button">Mode d'emploi</a>
-  </p>
-</div>
 
-<div class="mozaic"
+<%= render 'pages/partials/jumbotron' %>
 
-  <div class="col-md-12">
-    <div class="titlePlaces">
-      <h2>Les derniers lieux ajoutés</h2>
-    </div>
-      <%= render 'places/list' %>
-
-
-    <div class="titleExhib">
-      <h2>Les dernières expositions</h2>
-    </div>
-      <%= render 'exhibitions/list' %>
+<section class='home-galery'>
+  <div class='content last-places'>
+    <h2>Derniers lieux</h2>
+    <%= render 'places/list' %>
   </div>
-</div>
+  <div class='content last-exhibitions'>
+    <h2>Dernières expositions</h2>
+    <%= render 'exhibitions/list' %>
+  </div>
+</section>

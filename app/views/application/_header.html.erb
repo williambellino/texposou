@@ -1,0 +1,51 @@
+<header>
+  <div class='content'>
+    <a class='logo' href='#' title='Texposou'></a>
+    <nav class='left'>
+      <ul>
+        <li>
+          <%= link_to 'Accueil', root_path %>
+        </li>
+        <li>
+          <%= link_to 'À propos', about_path %>
+        </li>
+        <li>
+          <%= link_to 'Contact', contact_path %>
+        </li>
+      </ul>
+    </nav>
+    <nav class='right'>
+      <ul>
+        <li>
+          <a class='new-place' href='#'>Proposer un lieu</a>
+        </li>
+        <li class='account'>
+          <% if !user_signed_in? %>
+            <a href='#'>Mon compte</a>
+            <ul class='menu-account'>
+              <li>
+                <%= link_to 'Connexion', signin_path %>
+              </li>
+              <li>
+                <%= link_to 'Inscription', signup_path %>
+              </li>
+            </ul>
+          <% else %>
+            <%= link_to current_user, current_user %>
+            <ul class='menu-account'>
+              <li>
+                <%= link_to "Profil", current_user %>
+              </li>
+              <li>
+                <%= link_to 'Paramètres',edit_user_registration_path %>
+              </li>
+              <li>
+                <%= link_to 'Déconnexion', destroy_user_session_path, method: :delete %>
+              </li>
+            </ul>
+          <% end %>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

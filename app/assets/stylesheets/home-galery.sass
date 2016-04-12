@@ -1,0 +1,151 @@
+section.home-galery
+	width: 100%
+	height: auto
+	overflow: hidden
+
+	.last-places, .last-exhibitions
+		width: 100%
+		height: 100%
+		overflow: hidden
+
+		h2
+			color: white
+			padding: 20px
+			margin: 0
+			border: 3px solid white
+
+		article
+			position: relative
+			background: #F5F5F5
+			height: auto
+			display: inline-block
+			float: left
+			border: 3px solid white
+
+			.background-image
+				background-position: center center
+				background-color: rgba(0,0,0,.1)
+				background-repeat: no-repeat
+				background-size: cover
+				width: 100%
+				height: 355px
+
+			.infos
+				width: 100%
+				height: auto
+
+				h3
+					font-size: 22px
+					margin: 0
+
+				span
+					color: #777
+					display: block
+					font-size: 18px
+
+	.last-places
+		h2
+			background: $main-color
+
+		article
+			width: 50%
+
+			.infos
+				background: asset-data-url("mask.png") bottom left repeat-x
+				background-size: 1px 95%
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 100%
+				height: auto
+				padding: 20px
+
+				.infos-right
+					float: left
+
+					h3
+						color: white
+						margin: 0
+
+					span
+						color: rgba(255,255,255,.75)
+						font-weight: 300
+						font-size: 14px
+
+				.infos-place
+					float: right
+
+					.space, .capacity
+						background: rgba(0,0,0,.5)
+						width: 50px
+						height: 50px
+						border-radius: 50%
+						text-align: center
+						float: right
+						color: white
+						font-size: 16px
+						padding: 12px 0
+						margin-left: 10px
+						font-weight: 500
+						line-height: 14px
+
+						span
+							font-size: 10px
+							color: white
+							font-weight: 300
+
+	.last-exhibitions
+		h2
+			background: $second-color
+
+		article
+			width: 50%
+
+			.background-image
+				width: 100%
+
+			.infos
+				background: asset-data-url("mask.png") bottom left repeat-x
+				background-size: 1px 95%
+				position: absolute
+				width: 100%
+				height: auto
+				bottom: 0
+				left: 0
+				padding: 20px
+
+				.infos-date
+					float: left
+					width: 40px
+					height: 50px
+					border: 2px solid white
+					border-radius: 3px
+					padding: 4px 0
+					color: white
+					text-align: center
+					font-weight: 300
+					font-size: 21px
+
+					span
+						color: white
+						font-size: 10px
+
+				.infos-right
+					float: left
+					padding-left: 10px
+
+					h3
+						color: white
+
+						span.cat
+							display: inline-block
+							background: rgba(0,0,0,.33)
+							padding: 0 5px
+							border-radius: 2px
+							color: white
+							font-size: 16px
+
+					span
+						color: rgba(255,255,255,.75)
+						font-weight: 300
+						font-size: 14px

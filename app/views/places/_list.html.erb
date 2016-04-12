@@ -1,29 +1,19 @@
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Address</th>
-      <th>Zipcode</th>
-      <th>City</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @places.each do |place| %>
-      <tr>
-        <div class="col-md-1"><td><%= place.name %></td></div>
-        <div class="col-md-11"><td><%= place.description %></td></div>
-        <td><%= place.address %></td>
-        <td><%= place.zipcode %></td>
-        <td><%= place.city %></td>
-        <td><%= place.user %></td>
-        <td><%= link_to 'Show', place %></td>
-        <td><%= link_to 'Edit', edit_place_path(place) %></td>
-        <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<% @places.each do |place| %>
+  <article>
+    <%= link_to place do %>
+      <div class='background-image' style='background-image: url(https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=6e379696c515dcecab27d93ffe6ec0ad)'></div>
+      <div class='infos'>
+        <div class='infos-right'>
+          <h3><%= place.name %></h3>
+          <span><%= place.city %></span>
+        </div>
+        <div class='infos-place'>
+          <div class='space'>
+            <%= place.area %>
+            <span>m²</span>
+          </div>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </article>
+<% end %>

@@ -10,19 +10,110 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
-*= require_tree
+/*
  *= require_self
  */
 
-@import "bootstrap-sprockets"
-@import "bootstrap"
+// @import "bootstrap-sprockets"
+// @import "bootstrap"
 
-@import forms.css
-@import registration.css
-@import "topbar"
-@import "about"
+// VARS
+$background: #fff
+$main-color: #fd7d60
+$main-color-darker: #fd623f
+$second-color: #7abccc
+$font-family: "Roboto"
+$font-title: "Oswald"
+$content: #333
 
-@import page
+$h1: 25px
+$h2: 24px
+$h3: 22px
+$p: 22px
+$margin-section: 100px 0
 
-@import "place"
+@import mixin
+@import normalize
+@include google-font("Oswald", "400")
+@include google-font("Roboto", "400, 700, 400italic")
 
+* 
+	@include vendor-prefix(box-sizing, border-box)
+
+html, body
+	width: 100%
+	height: 100%
+
+a
+	color: $main-color
+	text-decoration: none
+
+	&:hover
+		color: $main-color
+
+	&:active
+		color: $main-color
+
+textarea:focus, input:focus
+	outline: 0
+
+::selection
+	background: $main-color
+	color: $content
+
+h1, h2, h3, h4, h5, h6
+	font-family: $font-title
+	color: $main-color
+	text-transform: uppercase
+	font-weight: 500
+	margin: 1em 0 .5em
+
+h1
+	font-size: $h1
+
+h2
+	font-size: $h2
+
+h3
+	font-size: $h3
+
+p
+	margin: .5em 0 1em
+	font-size: $p
+
+strong, b
+	font-weight: 500
+
+button, .button
+	background: $main-color
+	color: white
+	text-transform: uppercase
+	font-family: $font-title
+	font-size: 16px
+	padding: 15px 10px
+	text-align: center
+	border: 0
+	outline: none
+
+	&:hover
+		background: $main-color-darker
+
+body
+	background: $background
+	margin: 0
+	padding: 0
+	font-family: $font-family, sans-serif
+	color: $content
+
+	&.page
+		padding: 0
+
+div.content
+	max-width: 1170px
+	padding: 0 25px
+	margin: 0 auto
+	position: relative
+
+@import header
+@import jumbotron
+@import home-galery

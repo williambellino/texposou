@@ -15,3 +15,11 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+$(document).ready( function() {
+	$('.account a').click(openMenu);
+ });
+
+function openMenu() {
+	$(".menu-account").toggleClass('menu-open');
+};
