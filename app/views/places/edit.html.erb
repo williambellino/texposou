@@ -1,5 +1,5 @@
 <h1>Modifier mon lieu</h1>
-<% if @place.user_id == current_user %>
+<% if @place.user_id == current_user.id %>
 
   <%= render 'form' %>
 

@@ -85,9 +85,8 @@
 			</div>
 		</div>
 
-		<% if @place.user_id == current_user %>
+		<% if @place.user_id == current_user.id %>
 			<%= link_to 'Edit', edit_place_path(@place) %> |
 		<% end %>
-
 	</div>
 </section>
