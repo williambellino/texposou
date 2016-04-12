@@ -6,7 +6,6 @@
   <%= link_to 'Show', @place %> |
   <%= link_to 'Back', places_path %>
 <% else %>
-  <script type="text/javascript">
-    window.location.href="<%= place_path(@place) %>"  // put your correct path in a string here
-  </script>
+  <p>Vous ne pouvez pas modifier ce lieu</p>
+  <%= link_to 'Back', places_path %>
 <% end %>

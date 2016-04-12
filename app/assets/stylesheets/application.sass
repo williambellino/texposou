@@ -22,7 +22,7 @@ $background: #fff
 $main-color: #fd7d60
 $main-color-darker: #fd623f
 $second-color: #7abccc
-$font-family: "Roboto"
+$font-family: "Roboto Condensed"
 $font-title: "Oswald"
 $content: #333
 
@@ -34,8 +34,11 @@ $margin-section: 100px 0
 
 @import mixin
 @import normalize
+@import purecss/pure
+@import purecss/grids
+@import purecss/grids-responsive
 @include google-font("Oswald", "400")
-@include google-font("Roboto", "400, 700, 400italic")
+@include google-font("Roboto+Condensed", "400, 700, 400italic")
 
 * 
 	@include vendor-prefix(box-sizing, border-box)
@@ -63,7 +66,6 @@ textarea:focus, input:focus
 
 h1, h2, h3, h4, h5, h6
 	font-family: $font-title
-	color: $main-color
 	text-transform: uppercase
 	font-weight: 500
 	margin: 1em 0 .5em
@@ -82,7 +84,7 @@ p
 	font-size: $p
 
 strong, b
-	font-weight: 500
+	font-weight: 700
 
 button, .button
 	background: $main-color
@@ -102,7 +104,7 @@ body
 	background: $background
 	margin: 0
 	padding: 0
-	font-family: $font-family, sans-serif
+	font-family: $font-family
 	color: $content
 
 	&.page
@@ -114,6 +116,15 @@ div.content
 	margin: 0 auto
 	position: relative
 
+.pure-g [class*="pure-u"]
+	font-family: $font-family
+
+#notice
+	margin: 0
+	padding: 0
+
 @import header
 @import jumbotron
 @import home-galery
+@import page
+@import places
