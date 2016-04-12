@@ -2,7 +2,7 @@
 <p>
 	<%= @user.biography %>
 </p>
-
+<img src="http://www.gravatar.com/avatar/<%= Digest::MD5.hexdigest(@user.email) %>" alt="" />
 <% if @user.website %>
 <p>
 	<b>website:</b>
