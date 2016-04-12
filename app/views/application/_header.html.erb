@@ -17,7 +17,11 @@
     <nav class='right'>
       <ul>
         <li>
-          <a class='new-place' href='#'>Proposer un lieu</a>
+          <% if !user_signed_in? %>
+            <%= link_to 'Proposer un lieu', signin_path, class: "new-place" %>
+          <% else %>
+            <%= link_to 'Proposer un lieu', new_place_path, class: "new-place" %>
+          <% end %>
         </li>
         <li class='account'>
           <% if !user_signed_in? %>
@@ -31,7 +35,7 @@
               </li>
             </ul>
           <% else %>
-            <%= link_to current_user, current_user %>
+            <%= link_to current_user, "#"  %>
             <ul class='menu-account'>
               <li>
                 <%= link_to "Profil", current_user %>
