@@ -18,7 +18,7 @@
 #  website                :string
 #  current_sign_in_ip     :string
 #  last_sign_in_ip        :string
-#
+#  city                   :string
 
 class User < ActiveRecord::Base
   has_many :places
