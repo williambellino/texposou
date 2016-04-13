@@ -3,9 +3,9 @@
 
   <%= render 'form' %>
 
-  <%= link_to 'Show', @place %> |
-  <%= link_to 'Back', places_path %>
+  <%= link_to 'Voir plus', @place %> |
+  <%= link_to 'Retour', places_path %>
 <% else %>
   <p>Vous ne pouvez pas modifier ce lieu</p>
-  <%= link_to 'Back', places_path %>
+  <%= link_to 'Retour', places_path %>
 <% end %>

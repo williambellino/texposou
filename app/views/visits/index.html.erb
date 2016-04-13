@@ -18,8 +18,8 @@
         <td><%= visit.coming_at %></td>
         <td><%= visit.user %></td>
         <td><%= visit.exhibition %></td>
-        <td><%= link_to 'Show', exhibition_visit_path(id: visit.id, exhibition_id: visit.exhibition_id) %></td>
-        <td><%= link_to 'Edit', edit_exhibition_visit_path(visit) %></td>
+        <td><%= link_to 'Voir plus', exhibition_visit_path(id: visit.id, exhibition_id: visit.exhibition_id) %></td>
+        <td><%= link_to 'Editer', edit_exhibition_visit_path(visit) %></td>
         <td><%= link_to 'Destroy', exhibition_visit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

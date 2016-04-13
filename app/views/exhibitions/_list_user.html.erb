@@ -24,8 +24,8 @@
         <td><%= exhibition.artist %></td>
         <td><%= exhibition.place %></td>
         <td><%= exhibition.status %></td>
-        <td><%= link_to 'Show', exhibition %></td>
-        <td><%= link_to 'Edit', edit_exhibition_path(exhibition) %></td>
+        <td><%= link_to 'Voir plus', exhibition %></td>
+        <td><%= link_to 'Editer', edit_exhibition_path(exhibition) %></td>
         <td><%= link_to 'Destroy', exhibition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

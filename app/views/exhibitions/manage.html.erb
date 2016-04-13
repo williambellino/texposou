@@ -1,66 +1,71 @@
-<p id="notice"><%= notice %></p>
+<% if user_signed_in? && @exhibition.place.user_id == current_user.id %>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @exhibition.name %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @exhibition.name %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @exhibition.description %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @exhibition.description %>
+  </p>
 
-<p>
-  <strong>Opening at:</strong>
-  <%= @exhibition.opening_at %>
-</p>
+  <p>
+    <strong>Opening at:</strong>
+    <%= @exhibition.opening_at %>
+  </p>
 
-<p>
-  <strong>Closing at:</strong>
-  <%= @exhibition.closing_at %>
-</p>
+  <p>
+    <strong>Closing at:</strong>
+    <%= @exhibition.closing_at %>
+  </p>
 
-<p>
-  <strong>Capacity:</strong>
-  <%= @exhibition.capacity %>
-</p>
+  <p>
+    <strong>Capacity:</strong>
+    <%= @exhibition.capacity %>
+  </p>
 
-<p>
-  <strong>Artist:</strong>
-  <%= @exhibition.artist %>
-</p>
+  <p>
+    <strong>Artist:</strong>
+    <%= @exhibition.artist %>
+  </p>
 
-<p>
-  <strong>Place:</strong>
-  <%= @exhibition.place %>
-</p>
+  <p>
+    <strong>Place:</strong>
+    <%= @exhibition.place %>
+  </p>
 
-<p>
-  <strong>Status:</strong>
-  <%= @exhibition.status %>
-</p>
+  <p>
+    <strong>Status:</strong>
+    <%= @exhibition.status %>
+  </p>
 
-<%= simple_form_for @exhibition do |f| %>
-  <p><b>Acceptez-vous de créer cet évènement ?</b></p>
-  <div class="form-inputs">
-    <%= f.input :status, as: :radio_buttons, collection: ['declined', 'published'] %>
-  </div>
+  <%= simple_form_for @exhibition do |f| %>
+    <p><b>Acceptez-vous de créer cet évènement ?</b></p>
+    <div class="form-inputs">
+      <%= f.input :status, as: :radio_buttons, collection: ['declined', 'published'] %>
+    </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+  <% end %>
+  <%= link_to 'Editer les détails', edit_exhibition_path(@exhibition) %>
+  <%= link_to 'Retour', exhibitions_path %>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(':radio').change(function() {
+        if ($(this).prop('checked'))
+          if ($(this).val() == 'Accept')
+            $('#offer_r_comment').show();
+          else
+            $('#offer_r_comment').hide();
+        });
+    });
+  </script>
+<% else %>
+  <p>Vous ne pouvez pas gérer cette exposition</p>
+  <%= link_to 'Retour', exhibitions_path %>
 <% end %>
-
-<%= link_to 'Back', exhibitions_path %>
-
-<script type="text/javascript">
-  $(document).ready(function() {
-    $(':radio').change(function() {
-      if ($(this).prop('checked'))
-        if ($(this).val() == 'Accept')
-          $('#offer_r_comment').show();
-        else
-          $('#offer_r_comment').hide();
-      });
-  });
-</script>

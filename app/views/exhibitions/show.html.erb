@@ -115,8 +115,9 @@
 				</div>
 			</div>
 		</div>
-
-<%= link_to 'Edit', edit_exhibition_path(@exhibition) %> |
+		<% if user_signed_in? && @exhibition.place.user_id == current_user.id %>
+			<%= link_to 'Editer', edit_exhibition_path(@exhibition) %> |
+		<% end %>
 
 	</div>
 </section>

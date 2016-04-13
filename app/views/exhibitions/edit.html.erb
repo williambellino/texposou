@@ -1,6 +1,11 @@
-<h1>Editing Exhibition</h1>
+<% if user_signed_in? && @exhibition.place.user_id == current_user.id %>
+  <h1>Editing Exhibition</h1>
 
-<%= render 'form' %>
+  <%= render 'form' %>
 
-<%= link_to 'Show', @exhibition %> |
-<%= link_to 'Back', exhibitions_path %>
+  <%= link_to 'Voir plus', @exhibition %> |
+  <%= link_to 'Retour', exhibitions_path %>
+<% else %>
+  <p>Vous ne pouvez pas modifier ce lieu</p>
+  <%= link_to 'Retour', exhibitions_path %>
+<% end %>
