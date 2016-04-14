@@ -1,6 +1,7 @@
-<%= simple_form_for @place do |f| %>
+<%= simple_form_for @place, html: { multipart: true } do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
+  <%= f.input :thumbnail %>
   <%= f.input :address %>
   <%= f.input :zipcode %>
   <%= f.input :city %>

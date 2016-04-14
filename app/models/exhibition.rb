@@ -25,6 +25,9 @@ class Exhibition < ActiveRecord::Base
 	validates :artist, presence: true
 	validates :opening_at, presence: true
 
+	has_attached_file :thumbnail, styles: { large: "1440x930>", medium: "720x465>", thumb: "550x355#" }
+	validates_attachment_content_type :thumbnail, content_type: /\Aimage\/.*\Z/
+
 	attr_accessor :accepts
 
 	def to_s

@@ -1,9 +1,10 @@
-<%= simple_form_for(@exhibition) do |f| %>
+<%= simple_form_for @exhibition, html: { multipart: true } do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
     <%= f.input :name %>
     <%= f.input :description %>
+    <%= f.input :thumbnail %>
     <%= f.input :opening_at %>
     <%= f.input :closing_at %>
     <%= f.input :capacity %>

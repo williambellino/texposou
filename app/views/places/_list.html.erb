@@ -1,7 +1,7 @@
 <% @places.each do |place| %>
   <article>
     <%= link_to place do %>
-      <div class='background-image' style='background-image: url(https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=6e379696c515dcecab27d93ffe6ec0ad)'></div>
+      <div class='background-image' style='background-image: url(<%= place.thumbnail.url(:thumb) %>)'></div>
       <div class='infos'>
         <div class='infos-right'>
           <h3><%= place.name %></h3>

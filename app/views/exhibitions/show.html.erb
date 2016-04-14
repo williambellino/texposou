@@ -1,13 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <section class="page-top">
-	<div class='background-image' style='background-image: url(https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=6e379696c515dcecab27d93ffe6ec0ad)'></div>
+	<div class='background-image' style='background-image: url(<%= @exhibition.thumbnail.url(:large) %>)'></div>
 	<div class="overlay">
 		<div class='infos'>
 			<h1>
 				<%= @exhibition.name %>
 			</h1>
-			<span class="place-date-published">il y a <%= time_ago_in_words(@exhibition.created_at) %></span>
+			<span class="place-date-published">
+				il y a <%= time_ago_in_words(@exhibition.created_at) %>
+				<% if user_signed_in? && @exhibition.place.user_id == current_user.id %>
+					<%= link_to '(modifier)',edit_exhibition_path(@exhibition), :class => "page-edit" %>
+				<% end %>
+			</span>
 		</div>
 	</div>
 </section>
@@ -29,8 +34,8 @@
 					<ul class="page-details">
 						<li>Nom de l'artiste : <strong><%= @exhibition.artist %></strong></li>
 						<li>Art appliqué : <strong></strong></li>
-						<li>Site de l'artiste : <strong></strong></li>
-						<li>Site de l'artiste : <strong></strong></li>
+						<li>Site de l'artiste : <strong><%= @exhibition.artist.website %></strong></li>
+						<li>Ville de l'artiste : <strong><%= @exhibition.artist.city %></strong></li>
 					</ul>
 				</div>
 				<div class="page-gallery">

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160413133552) do
+ActiveRecord::Schema.define(version: 20160414155553) do
 
   create_table "exhibitions", force: :cascade do |t|
     t.string   "name"
@@ -22,8 +22,12 @@ ActiveRecord::Schema.define(version: 20160413133552) do
     t.integer  "artist_id"
     t.integer  "place_id"
     t.string   "status"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "thumbnail_file_name"
+    t.string   "thumbnail_content_type"
+    t.integer  "thumbnail_file_size"
+    t.datetime "thumbnail_updated_at"
   end
 
   add_index "exhibitions", ["place_id"], name: "index_exhibitions_on_place_id"
@@ -35,9 +39,13 @@ ActiveRecord::Schema.define(version: 20160413133552) do
     t.string   "zipcode"
     t.string   "city"
     t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
     t.integer  "area"
+    t.string   "thumbnail_file_name"
+    t.string   "thumbnail_content_type"
+    t.integer  "thumbnail_file_size"
+    t.datetime "thumbnail_updated_at"
   end
 
   add_index "places", ["user_id"], name: "index_places_on_user_id"

@@ -20,7 +20,10 @@ class Place < ActiveRecord::Base
 
   validates_presence_of :name, :description, :address, :zipcode, :city, :user_id, :area
 
+  has_attached_file :thumbnail, styles: { large: "1440x930>", medium: "720x465>", thumb: "550x355#" }
+  validates_attachment_content_type :thumbnail, content_type: /\Aimage\/.*\Z/
+
   def to_s
-  	"#{name}"
+    "#{name}"
   end
 end
