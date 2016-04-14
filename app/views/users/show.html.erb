@@ -1,23 +1,47 @@
-<h1><%= @user.username %></h1>
-<p>
-	<%= @user.biography %>
-</p>
-<img src="http://www.gravatar.com/avatar/<%= Digest::MD5.hexdigest(@user.email) %>" alt="" />
-<% if @user.website %>
-<p>
-	<b>website:</b>
-	<%= link_to @user.website, @user.website, :target => "_blank" %>
-</p>
-<% end %>
+<section class="page-container profile-container">
+	<div class="content">
+		<div class="avatar">
+			<img src="http://www.gravatar.com/avatar/<%= Digest::MD5.hexdigest(@user.email) %>?s=400" alt="<%= @user.username %>" />
+		</div>
+		<div class="profile-infos">
+			<h1>
+				<%= @user.username %>
+				<% if user_signed_in? && @user.id == current_user.id %>
+					<%= link_to 'modifier le profil',edit_user_registration_path, :class => "button profile-edit" %>
+				<% end %>
+			</h1>
+			<span class="profile-city">
+				Bordeaux
+				<% if @user.city %>
+					<%= @user.city %>
+				<% end %>
+			</span>
+			<span class="last-connection"> dernière connexion le <%= @user.last_sign_in_at.strftime("%d/%m/%Y") %></span>
+			<div class="profile-data">
+				<p class="profile-bio">
+					<%= @user.biography %>
+				</p>
+				<% if @user.website %>
+					<p class="profile-website"><%= link_to @user.website, @user.website, :target => "_blank" %></p>
+				<% end %>	
+			</div>
+		</div>
+	</div>
+</section>
 
-<span style="font-style: italic; color: #777">Last connection <%= @user.last_sign_in_at %></span>
+<section class='home-galery'>
+	<div class='content last-places'>
+		<h2>Mes lieux</h2>
+		<%= render 'places/list' %>
 
-<h1>Mes adresses</h1>
-<%= render 'places/list' %>
-<%= link_to 'Nouvelle adresse', new_place_path %>
-
-<h1>Mes expositions</h1>
-<%= render 'exhibitions/list' %>
-
-<h1>Mes inscriptions</h1>
-<%= render 'visits/list' %>
+		<%= link_to 'Nouvelle adresse', new_place_path %>
+	</div>
+	<div class='content last-exhibitions'>
+		<h2>Mes expositions</h2>
+		<%= render 'exhibitions/list' %>
+	</div>
+	<div class="content">
+		<h2>Mes inscriptions</h2>
+		<%= render 'visits/list' %>
+	</div>
+</section>
