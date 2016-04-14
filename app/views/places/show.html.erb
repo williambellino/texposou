@@ -87,6 +87,9 @@
 					<h3>Plus de photos</h3>
 				</div>
 			</div>
+			<% if user_signed_in? && @place.user_id == current_user.id %>
+				<%= render 'exhibitions/form' %>
+			<% end %>
 		</div>
 	</div>
 </section>

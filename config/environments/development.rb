@@ -40,5 +40,10 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
-  Paperclip.options[:command_path] = "/usr/local/bin/"
+
+  #Comment/UnComment the following line for use on Unix system
+  #Paperclip.options[:command_path] = "/usr/local/bin/"
+
+  #Comment/Uncomment the following line for use on Windows system (requires softwares)
+  Paperclip.options[:command_path] = 'C:\Program Files (x86)\GnuWin32\bin'
 end

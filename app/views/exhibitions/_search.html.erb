@@ -1,0 +1,7 @@
+<%= search_form_for @search do |f| %>
+<%= f.label :name_cont %>
+<%= f.text_field :name_cont, class: "place", id: "place", placeholder: "Lieu d'exposition" %>
+<%= f.label :opening_at_cont %>
+<%= f.text_field :opening_at_cont, class: "date-from", id: "date-from", placeholder: "à partir du" %>
+<%= f.submit %>
+<% end %>
