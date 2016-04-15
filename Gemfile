@@ -12,7 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'simple_form'
 gem 'haml'
-gem 'bootstrap-sass'
+# gem 'bootstrap-sass'bundle in
 gem 'paperclip', '~> 4.2'
 
 group :development, :test do

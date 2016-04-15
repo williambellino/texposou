@@ -42,8 +42,8 @@ Rails.application.configure do
 
 
   #Comment/UnComment the following line for use on Unix system
-  #Paperclip.options[:command_path] = "/usr/local/bin/"
+  Paperclip.options[:command_path] = "/usr/local/bin/"
 
   #Comment/Uncomment the following line for use on Windows system (requires softwares)
-  Paperclip.options[:command_path] = 'C:\Program Files (x86)\GnuWin32\bin'
+  # Paperclip.options[:command_path] = 'C:\Program Files (x86)\GnuWin32\bin'
 end

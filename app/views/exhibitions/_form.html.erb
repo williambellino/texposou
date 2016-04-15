@@ -1,23 +1,30 @@
+<p><%= controller_name %></p>
+<p><%= action_name %></p>
+
 <%= simple_form_for @exhibition, html: { multipart: true } do |f| %>
-  <%= f.error_notification %>
+	<%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :description %>
-    <%= f.input :thumbnail %>
-    <%= f.input :opening_at %>
-    <%= f.input :closing_at %>
-    <%= f.input :capacity %>
-    <%= f.association :artist %>
-    <% if @place %>
-    <%= f.input :place_id, as: :hidden, input_html: { value: @place.id } %>
-    <% else %>
-    <%= f.input :place %>
-    <% end %>
-    <%= f.input :status, as: :hidden, input_html: { value: "pending" } %>
-  </div>
+	<div class="form-inputs">
+		<%= f.input :name %>
+		<%= f.input :description %>
+		<%= f.input :thumbnail %>
+		<%= f.input :opening_at %>
+		<%= f.input :closing_at %>
+		<%= f.input :capacity %>
+		<%= f.association :artist %>
+		<% if action_name == "new" %>
+			<% if @place %>
+				<%= f.input :place_id, as: :hidden, input_html: { value: @place.id } %>
+			<% else %>
+				<%= f.input :place %>
+			<% end %>
+			<%= f.input :status, as: :hidden, input_html: { value: "pending" } %>
+		<% else %>
+			<%= f.input :status, as: :hidden, input_html: { value: "published" } %>
+		<% end %>
+	</div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+	<div class="form-actions">
+		<%= f.button :submit %>
+	</div>
 <% end %>
