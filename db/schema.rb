@@ -64,8 +64,6 @@ ActiveRecord::Schema.define(version: 20160414155553) do
     t.string   "username"
     t.text     "biography"
     t.string   "website"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
     t.string   "city"
   end
 
